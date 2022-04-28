@@ -1,5 +1,10 @@
 <div class="wrapper">
   <h1>-=Message=-</h1>
-  <app-message-input></app-message-input>
-  <app-message-output></app-message-output>
+  <app-message-input
+    (onAdd)="updateMessage($event)"
+  ></app-message-input>
+  <app-message-output
+    *ngFor="let message of messages"
+    [message]="message"
+  ></app-message-output>
 </div>

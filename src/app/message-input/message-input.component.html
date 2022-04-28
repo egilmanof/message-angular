@@ -1,4 +1,9 @@
 <div class="message">
-  <input type="text" class="message-input" placeholder="Введите сообщение...">
-  <button type="button">Отправить</button>
+  <input
+    type="text"
+    class="message-input"
+    placeholder="Введите сообщение..."
+    [(ngModel)]="text"
+  >
+  <button type="button" class="message-bnt" (click)="addMessage()">Отправить</button>
 </div>
